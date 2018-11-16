@@ -1,0 +1,24 @@
+{
+  "APP": {
+    "ACTIONS": {
+      "BLOCKCHAIN_REGISTER": "Register on Blockchain",
+      "BLOCKCHAIN_VERIFY": "Verify on Blockchain"
+    },
+    "MESSAGES": {
+      "INFO": {
+        "BLOCKCHAIN": {
+          "FILE_WAS": "File %s was",
+          "FILE_IS": "File %s is",
+          "REGISTRATION_STARTED": "The registration process was successfully started for file %s",
+          "PROCESS_FAILED": "The %s process has failed for file %s",
+          "REGISTERED_ON": "registered on",
+          "PENDING": "pending registration",
+          "NOT_REGISTERED": "not registered",
+          "ALREADY_REGISTERED": "already registered",
+          "REGISTRATION": "registration",
+          "VERIFICATION": "verification"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "../../../extension.schema.json",
+  "$version": "0.1.0",
+  "$name": "blockchain-factom",
+  "$description": "Blockchain plugin",
+  "actions": [
+    {
+      "id": "BLOCKCHAIN_REGISTER",
+      "type": "BLOCKCHAIN_REGISTER"
+    },
+    {
+      "id": "BLOCKCHAIN_VERIFY",
+      "type": "BLOCKCHAIN_VERIFY"
+    }
+  ],
+  "features": {
+    "toolbar": [
+      {
+        "id": "app.toolbar.more",
+        "type": "menu",
+        "order": 10000,
+        "icon": "more_vert",
+        "title": "APP.ACTIONS.MORE",
+        "children": [
+          {
+            "id": "app.toolbar.blockchain-sign",
+            "order": 1200,
+            "title": "APP.ACTIONS.BLOCKCHAIN_REGISTER",
+            "icon": "edit",
+            "actions": {
+              "click": "BLOCKCHAIN_REGISTER"
+            },
+            "rules": {
+              "visible": "app.toolbar.canCopyNode"
+            }
+          },
+          {
+            "id": "app.toolbar.blockchain-verify",
+            "order": 1300,
+            "title": "APP.ACTIONS.BLOCKCHAIN_VERIFY",
+            "icon": "check",
+            "actions": {
+              "click": "BLOCKCHAIN_VERIFY"
+            },
+            "rules": {
+              "visible": "app.toolbar.canCopyNode"
+            }
+          }
+        ]
+      }
+    ],
+    "contextMenu": [
+      {
+        "id": "app.context.menu.blockchain-sign",
+        "order": 1400,
+        "title": "APP.ACTIONS.BLOCKCHAIN_REGISTER",
+        "icon": "edit",
+        "actions": {
+          "click": "BLOCKCHAIN_REGISTER"
+        },
+        "rules": {
+          "visible": "app.toolbar.canCopyNode"
+        }
+      },
+      {
+        "id": "app.context.menu.blockchain-verify",
+        "order": 1500,
+        "title": "APP.ACTIONS.BLOCKCHAIN_VERIFY",
+        "icon": "check",
+        "actions": {
+          "click": "BLOCKCHAIN_VERIFY"
+        },
+        "rules": {
+          "visible": "app.toolbar.canCopyNode"
+        }
+      }
+    ],
+    "viewer": {
+      "toolbar": [
+        {
+          "id": "app.viewer.blockchain-sign",
+          "order": 900,
+          "title": "APP.ACTIONS.BLOCKCHAIN_REGISTER",
+          "icon": "edit",
+          "actions": {
+            "click": "BLOCKCHAIN_REGISTER"
+          },
+          "rules": {
+            "visible": "app.toolbar.canCopyNode"
+          }
+        },
+        {
+          "id": "app.viewer.blockchain-verify",
+          "order": 1000,
+          "title": "APP.ACTIONS.BLOCKCHAIN_VERIFY",
+          "icon": "check",
+          "actions": {
+            "click": "BLOCKCHAIN_VERIFY"
+          },
+          "rules": {
+            "visible": "app.toolbar.canCopyNode"
+          }
+        }
+      ]
+    }
+  }
+}
